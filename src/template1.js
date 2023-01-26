@@ -14,7 +14,7 @@ function createHtml(teamArray) {
   <body>
       <div class="container-fluid">
               <div class="col-12 jumbotron mb-3 team-heading bg-danger">
-                  <h1 class="text-center text-white">My Team</h1>
+                  <h1 class="text-center text-black">My Team</h1>
           </div>
           <div class="d-flex justify-content-around">
       ${createTeam(teamArray)}
@@ -59,7 +59,7 @@ function createTeam(teamArray) {
       <ul class="list-group">
           <li class="list-group-item">ID: ${teamArray[i].getId()}</li>
           <li class="list-group-item">Email: <a href="mailto:${teamArray[i].getEmail()}">${teamArray[i].getEmail()}</a></li>
-          <li class="list-group-item">GitHub Link: <a href="(https://github.com/${teamArray[i].getHub()})" target=  "_blank"></a></li>
+          <li class="list-group-item">GitHub Link: <a href="(https://github.com/${teamArray[i].getGithub()})" target="_blank"></a></li>
       </ul>
   </div>
 </div>

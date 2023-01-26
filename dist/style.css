@@ -1,5 +1,7 @@
 .jumbotron {
     border-radius: 0;
+    background-color: darkcyan;
+    background-image: url(https://www.ntaskmanager.com/wp-content/uploads/2021/06/types-of-teams.png);
 }
 .employee-card {
     box-shadow: 5px 5px 5px gray;
