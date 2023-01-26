@@ -1,11 +1,11 @@
-main {
-    background-color: #e1e1e1;
+.jumbotron {
+    border-radius: 0;
 }
-
-html {
-    line-height: 1.15;
-
+.employee-card {
+    box-shadow: 5px 5px 5px gray;
+    margin: 1rem;
+    border: none;
 }
-h1 {
-    text-align: center !important;
+.card-body {
+    background-color: rgb(240, 240, 240);
 }
