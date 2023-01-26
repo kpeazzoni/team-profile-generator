@@ -1,5 +1,5 @@
 function createHtml(teamArray) {
-   return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8" />
@@ -20,20 +20,20 @@ function createHtml(teamArray) {
       ${createTeam(teamArray)}
       </div>
   </div>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous">
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+      </script>
 </body>
 </html>
       `
 };
 function createTeam(teamArray) {
-let html = "";
-for (var i = 0; i < teamArray.length; i++) {
-  if (teamArray[i].getRole() === "Manager") {
-    html += `
+  let html = "";
+  for (var i = 0; i < teamArray.length; i++) {
+    if (teamArray[i].getRole() === "Manager") {
+      html += `
    <div class="card manager-card w-25 p-5">
      <div class="card-header bg-primary text-white">
          <h2 class="card-title" id="manager">${teamArray[i].getName()}</h2>
@@ -48,41 +48,41 @@ for (var i = 0; i < teamArray.length; i++) {
      </div>
    </div>
      `
-  } else if (teamArray[i].getRole() === "Engineer") {
-  html += `
+    } else if (teamArray[i].getRole() === "Engineer") {
+      html += `
   <div class="card engineer-card w-25 p-5">
   <div class="card-header bg-primary text-white">
-      <h2 class="card-title">${teamArray[i].name}</h2>
+      <h2 class="card-title">${teamArray[i].getName()}</h2>
       <h3 class="card-title" id="engineer"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
   </div>
   <div class="card-body">
       <ul class="list-group">
-          <li class="list-group-item">ID: ${teamArray[i].id}</li>
-          <li class="list-group-item">Email: <a href="mailto:${teamArray[i].email}">${teamArray[i].email}</a></li>
-          <li class="list-group-item">GitHub Link: <a href="(https://github.com/${teamArray[i].github})"></a></li>
+          <li class="list-group-item">ID: ${teamArray[i].getId()}</li>
+          <li class="list-group-item">Email: <a href="mailto:${teamArray[i].getEmail()}">${teamArray[i].getEmail()}</a></li>
+          <li class="list-group-item">GitHub Link: <a href="(https://github.com/${teamArray[i].getHub()})" target=  "_blank"></a></li>
       </ul>
   </div>
 </div>
   `
-  } else {
-    html += `
+    } else {
+      html += `
     <div class="card intern-card w-25 p-5">
   <div class="card-header bg-primary text-white">
-      <h2 class="card-title">${teamArray[i].name}</h2>
+      <h2 class="card-title">${teamArray[i].getName()}</h2>
       <h3 class="card-title" id="intern"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
   </div>
   <div class="card-body">
       <ul class="list-group">
-          <li class="list-group-item">ID: ${teamArray[i].id}</li>
-          <li class="list-group-item">Email: <a href="mailto:${teamArray[i].email}">${teamArray[i].email}</a></li>
-          <li class="list-group-item">School: ${teamArray[i].school}</li>
+          <li class="list-group-item">ID: ${teamArray[i].getId()}</li>
+          <li class="list-group-item">Email: <a href="mailto:${teamArray[i].getEmail()}">${teamArray[i].getEmail()}</a></li>
+          <li class="list-group-item">School: ${teamArray[i].getSchool()}</li>
       </ul>
   </div>
   </div>
     `
+    }
   }
-}
-return html;
+  return html;
 }
 
 module.exports = createHtml
