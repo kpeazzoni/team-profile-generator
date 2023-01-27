@@ -59,7 +59,7 @@ function createTeam(teamArray) {
       <ul class="list-group">
           <li class="list-group-item">ID: ${teamArray[i].getId()}</li>
           <li class="list-group-item">Email: <a href="mailto:${teamArray[i].getEmail()}">${teamArray[i].getEmail()}</a></li>
-          <li class="list-group-item">GitHub Link: <a href="(https://github.com/${teamArray[i].getGithub()})" target="_blank"></a></li>
+          <li class="list-group-item">GitHub Link: <a href="https://github.com/${teamArray[i].getGithub()}" target="_blank">${teamArray[i].getGithub()}</a></li>
       </ul>
   </div>
 </div>
