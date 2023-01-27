@@ -90,7 +90,7 @@ function runApp() {
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
             teamArray.push(manager);
-            idArray.push(answers.internId);
+            idArray.push(answers.managerId);
             createTeam(teamArray);
         });
     }
@@ -143,7 +143,7 @@ function runApp() {
         ]).then(answers => {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
             teamArray.push(engineer);
-            idArray.push(answers.internId)
+            idArray.push(answers.engineerId)
             createTeam(teamArray);
         });
     }
