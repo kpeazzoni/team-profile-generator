@@ -1,3 +1,4 @@
+// global scoped variables and requirments  
 const inquirer = require('inquirer');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
@@ -29,7 +30,7 @@ function runApp() {
                     createIntern();
                     break;
                 default:
-                    fs.writeFileSync('./dist/team.html', createHtml(teamArray));;
+                    fs.writeFileSync('./dist/team.html', createHtml(teamArray));
             }
         })
     }
