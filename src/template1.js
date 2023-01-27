@@ -16,7 +16,7 @@ function createHtml(teamArray) {
               <div class="col-12 jumbotron mb-3 team-heading bg-danger">
                   <h1 class="text-center text-black">My Team</h1>
           </div>
-          <div class="d-flex justify-content-around">
+          <div class="d-flex flex-wrap flex-row justify-content-around flex-direction: column">
       ${createTeam(teamArray)}
       </div>
   </div>
@@ -34,7 +34,7 @@ function createTeam(teamArray) {
   for (var i = 0; i < teamArray.length; i++) {
     if (teamArray[i].getRole() === "Manager") {
       html += `
-   <div class="card manager-card w-25 p-5">
+   <div class="card manager-card flex-direction: column w-25 p-5">
      <div class="card-header bg-primary text-white">
          <h2 class="card-title" id="manager">${teamArray[i].getName()}</h2>
          <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
@@ -50,7 +50,7 @@ function createTeam(teamArray) {
      `
     } else if (teamArray[i].getRole() === "Engineer") {
       html += `
-  <div class="card engineer-card w-25 p-5">
+  <div class="card engineer-card flex-direction: column w-25 p-5">
   <div class="card-header bg-primary text-white">
       <h2 class="card-title">${teamArray[i].getName()}</h2>
       <h3 class="card-title" id="engineer"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
@@ -66,7 +66,7 @@ function createTeam(teamArray) {
   `
     } else {
       html += `
-    <div class="card intern-card w-25 p-5">
+    <div class="card intern-card flex-direction: column w-25 p-5">
   <div class="card-header bg-primary text-white">
       <h2 class="card-title">${teamArray[i].getName()}</h2>
       <h3 class="card-title" id="intern"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>

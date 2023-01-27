@@ -34,7 +34,7 @@ https://drive.google.com/file/d/1fC9R5AgO2AVd-rr1oXpadJt9kU1x4qO5/view?usp=shari
 ![Manager was created](assets/Screen%20Shot%202023-01-26%20at%209.25.04%20PM.png)
 
 
-![creating Engineer]    (assets/Screen%20Shot%202023-01-26%20at%209.25.25%20PM.png)
+![creating Engineer](assets/Screen%20Shot%202023-01-26%20at%209.25.25%20PM.png)
 
 
 ![Engineer was created](assets/Screen%20Shot%202023-01-26%20at%209.25.59%20PM.png)

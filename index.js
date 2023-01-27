@@ -10,6 +10,12 @@ const createHtml = require('./src/template1')
 const idArray = [];
 
 function runApp() {
+  console.log(`
+    -----------------------------------------------------------------------------
+    Get ready to creat your awesome Team! 
+    Answer the following questions to create your team profiles.
+    -----------------------------------------------------------------------------
+    `);
     createTeam();
     //Creating My Team: 
     function createTeam() {
@@ -30,6 +36,12 @@ function runApp() {
                     createIntern();
                     break;
                 default:
+                  console.log(`
+                      --------------------------------------------
+                      You're all set! Your Team has been created! 
+                      Enjoy!
+                      --------------------------------------------
+                      `)
                     fs.writeFileSync('./dist/team.html', createHtml(teamArray));
             }
         })
